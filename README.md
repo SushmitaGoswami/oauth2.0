@@ -40,7 +40,7 @@ Grant type specifies the way a client receives it access  token. Depending on th
 5. Device - device code grant type.
 
 
-1. **Authorization-code grant** - Please check this collection
+1. **Authorization-code grant** - Please check this collection. Here client will be confidential.
 2. **PKCE Enhanced authorization-code grant** -  In this case, client needs to provide code_verifier and code_challenge values. Following is the process to generate both.
      
      - **Code_verifier** = high-entropy cryptographic random STRING using the unreserved characters [A-Z] / [a-z] / [0-9] / "-" / "." / "_" / "~" from Section 2.3 of [RFC3986], with a minimum length of 43 characters and a maximum length of 128 characters. -- according to https://datatracker.ietf.org/doc/html/rfc7636#section-4.1 
@@ -53,8 +53,10 @@ Grant type specifies the way a client receives it access  token. Depending on th
      S256
       code_challenge = BASE64URL-ENCODE(SHA256(ASCII(code_verifier))).
       
-     Please check this collection
+     Here, client will be public. Please check this collection
 
+3. **Client to client/ machine to machine/ service to service** - In this case, client application will directly get the access token from the authorization server.
+4. **Password grant type** - This is applicable when there is no redirection allowed. For example native or mobile application. 
     
    
 
