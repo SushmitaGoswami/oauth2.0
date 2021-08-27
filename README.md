@@ -26,7 +26,9 @@ OAuth is sometimes called delegated Authroization framework as it is possible fo
                       b. payload or claim
                       c. signature.
    Now ideally, it should not contain any information regarding the currently authenticated user. It is usually obtained using another endpoint like /user-info. However, OpenID Connect 1.0 is a simple identity layer on top of the OAuth 2.0 protocol. It allows Clients to verify the identity of the End-User based on the authentication performed by an Authorization Server, as well as to obtain basic profile information. Hence, it is also called an identity provider. Openid 2.0 makes it more usable by native and mobile applications. 
-   
+  
+## Refresh Token 
+Refresh token is used to renew an access token as access token is short lived.
    
 ## Grant Type
 Grant type specifies the way a client receives it access  token. Depending on the client type, grant types differ.
@@ -59,6 +61,8 @@ Grant type specifies the way a client receives it access  token. Depending on th
 4. **Password grant type** - This is applicable when there is no redirection allowed. For example native or mobile application. 
     
    
+## Scope 
+Scope limits the access of an applicatio to the user's account.
 
-
-
+## Role
+Role basically signfies the authorites.
